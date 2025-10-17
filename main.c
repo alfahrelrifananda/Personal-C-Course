@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 
 int main(){
     
@@ -190,8 +191,42 @@ int main(){
     
     printf("%d\n", z);
     */
-   
+
     // ! 5.
+    // ? User Input = scanf
+    
+    int age = 0; // * To prevent undefined behaviour
+    float gpa = 0.0; // * To prevent undefined behaviour
+    char grade = '\0'; // * To prevent undefined behaviour
+    char name[33] = ""; // * To prevent undefined behaviour
+    
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    
+    printf("Enter your gpa: ");
+    scanf("%f", &gpa);
+    
+    printf("Enter your grade: ");
+    // * The whitespace before optional specifier is to remove the new line character
+    scanf(" %c", &grade);
+    
+    // * It have new line character, to remove it we need
+    getchar();    
+    printf("Enter your name: ");
+    
+    // * it will not take a character after whitespace
+    // scanf("%s", name);
+    // * this is the alternative
+    // fgets(name, 33, stdin);
+    // * that 33 is a number of character to read, to make it dynamic here it is
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0'; // * To remove the new line character
+    // * If you move the name after scanf it will take a new line character
+    printf("%s \n", name);
+    printf("%d \n", age);
+    printf("%.2f \n", gpa);
+    printf("%c \n", grade);
+    
     
     return 0;
 }
