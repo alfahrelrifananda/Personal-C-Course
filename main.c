@@ -250,8 +250,8 @@ int main(){
     total = price * quantity;
     
     printf("You have bought %d %s/s \n", quantity, item);
-    printf("Your total is %.2f %c \n", total, currency);
-    
+    printf("The total amount is %.2f %c \n", total, currency);
+    // printf("The total amount is %.2f %s", total, currency); // ! It create seg fault
     
     return 0;
 }
