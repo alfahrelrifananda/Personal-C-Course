@@ -194,7 +194,7 @@ int main(){
 
     // ! 5.
     // ? User Input = scanf
-    
+    /*
     int age = 0; // * To prevent undefined behaviour
     float gpa = 0.0; // * To prevent undefined behaviour
     char grade = '\0'; // * To prevent undefined behaviour
@@ -226,6 +226,31 @@ int main(){
     printf("%d \n", age);
     printf("%.2f \n", gpa);
     printf("%c \n", grade);
+    */
+   
+    // ! 6.
+    // ? SHOPPING CART PROGRAM
+    
+    char item[50] = "";
+    float price = 0.0f;
+    int quantity = 0;
+    float total = 0.0f;
+    char currency = '$';
+    
+    printf("What item would you like to buy? : ");
+    fgets(item, sizeof(item), stdin);
+    item[strlen(item) - 1] = '\0';
+    
+    printf("How much the item cost each? : ");
+    scanf("%f", &price);
+    
+    printf("How many of the item you want to buy? : ");
+    scanf("%d", &quantity);
+    
+    total = price * quantity;
+    
+    printf("You have bought %d %s/s \n", quantity, item);
+    printf("Your total is %.2f %c \n", total, currency);
     
     
     return 0;
