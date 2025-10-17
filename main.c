@@ -230,7 +230,7 @@ int main(){
    
     // ! 6.
     // ? SHOPPING CART PROGRAM
-    
+    /*
     char item[50] = "";
     float price = 0.0f;
     int quantity = 0;
@@ -252,6 +252,41 @@ int main(){
     printf("You have bought %d %s/s \n", quantity, item);
     printf("The total amount is %.2f %c \n", total, currency);
     // printf("The total amount is %.2f %s", total, currency); // ! It create seg fault
+    */
+   
+    // ! 7.
+    // ? MAD LIBS GAME
     
+    char noun[50] = "";
+    char verb[50] = "";
+    char adjective1[50] = "";
+    char adjective2[50] = "";
+    char adjective3[50] = "";
+    
+    
+    printf("Enter an adjective 1 (description): ");
+    fgets(adjective1, sizeof(adjective1), stdin);
+    adjective1[strlen(adjective1) - 1] = '\0';
+    
+    printf("Enter a noun (person / animal): ");
+    fgets(noun, sizeof(noun), stdin);
+    noun[strlen(noun) - 1] = '\0';
+    
+    printf("Enter an adjective 2 (description): ");
+    fgets(adjective2, sizeof(adjective2), stdin);
+    adjective2[strlen(adjective2) - 1] = '\0';
+    
+    printf("Enter a verb (-ing): ");
+    fgets(verb, sizeof(verb), stdin);
+    verb[strlen(verb) - 1] = '\0';
+    
+    printf("Enter an adjective 3 (description): ");
+    fgets(adjective3, sizeof(adjective3), stdin);
+    adjective3[strlen(adjective3) - 1] = '\0';
+    
+    printf("Today i went to the %s zoo.\n", adjective1);
+    printf("I saw a %s %s.\n", adjective2, noun);
+    printf("It was so %s that i %s.\n", adjective3, verb);
+
     return 0;
 }
