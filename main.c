@@ -126,6 +126,11 @@ int main(){
     */
    
     // * Optional Specifiers
+    // width, precision, and value
+    // width = the minimum number of characters to print
+    // precision = the number of digits to print after the decimal point
+    // value = the value to print
+    
     // Set width
     /*
     int num1 = 1;
