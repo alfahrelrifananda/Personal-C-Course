@@ -49,7 +49,7 @@ int main(){
     
     printf("your gpa is = %f\n", gpa);
     printf("your height is = %f\n", height);
-    printf("the temperature is = %f Celcius\n", temperature);
+    printf("the temperature is = %f Celsius\n", temperature);
     
     // * 3. double
     double pi = 3.14159265358979323846;
