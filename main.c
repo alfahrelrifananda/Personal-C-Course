@@ -151,7 +151,6 @@ int main(){
     printf("%+d \n", num1);
     printf("%+d \n", num2);
     printf("%+d \n", num3);
-    */
    
     // Set precision
     float num1 = 1.2345;
@@ -167,6 +166,32 @@ int main(){
     printf("%.3f \n", num1);
     printf("%.3f \n", num2);
     printf("%.3f \n", num3);
+    */
+   
+    // ! 4.
+    // ? Arithmetic operators
+    /*
+    int x = 10;
+    int y = 5;
+    int z = 0;
+    
+    z = x + y;
+    z = x - y;
+    z = x * y;
+    z = x / y;
+    z = x % y;
+    
+    // * Shortcut
+    x+=y;
+    x-=y;
+    x*=y;
+    x/=y;
+    x%=y;
+    
+    printf("%d\n", z);
+    */
+   
+    // ! 5.
     
     return 0;
 }
