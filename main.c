@@ -355,6 +355,7 @@ int main(){
     
     // ! 10.
     // ? COMPOUND INTEREST CALCULATOR
+    /*
     double principal = 0.0;
     double rate = 0.0;
     int years = 0;
@@ -380,7 +381,23 @@ int main(){
     total = principal * pow(1 + rate / timesCompounded, timesCompounded * years);
     
     printf("After %d years, the total is $%.2f\n", years, total);
+    */
+   
+    // ! 11.
+    // ? If statement
     
+    char name[50] = "";
+    
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';
+    
+    // * Check empty string
+    if (strlen(name) == 0) {
+        printf("You DID NOT enter your name\n");
+    } else {
+        printf("Hello %s \n", name);
+    }
     return 0;
     
 }
