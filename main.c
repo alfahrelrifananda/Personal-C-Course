@@ -385,7 +385,7 @@ int main(){
    
     // ! 11.
     // ? If statement
-    
+    /*
     char name[50] = "";
     
     printf("Enter your name: ");
@@ -398,6 +398,38 @@ int main(){
     } else {
         printf("Hello %s \n", name);
     }
+    */
+   
+    // ! 12.
+    // ? WEIGHT CONVERSION PROGRAM
+    
+    int choice = 0;
+    float pounds = 0.0f;
+    float kilograms = 0.0f;
+    
+    printf("=========================\n");
+    printf("WEIGHT CONVERSION PROGRAM \n");
+    printf("=========================\n");
+    printf("1 - Pounds to Kilograms\n");
+    printf("2 - Kilograms to Pounds\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    
+    if (choice == 1) {
+        printf("Enter the weight in pounds: ");
+        scanf("%f", &pounds);
+        kilograms = pounds * 2.20462;
+        printf("%.2f pounds is equal to %.2f kilograms \n", pounds, kilograms);
+    } else if (choice == 2) {
+        printf("Enter the weight in kilograms: ");
+        scanf("%f", &kilograms);
+        pounds = kilograms / 2.20462;
+        printf("%.2f kilograms is equal to %.2f pounds \n", kilograms, pounds);
+    } else {
+        printf("Invalid choice please enter 1 or 2 \n");
+    }
+    
+    
     return 0;
     
 }
