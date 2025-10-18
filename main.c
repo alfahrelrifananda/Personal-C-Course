@@ -1,6 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
+#include <math.h>
 
 int main(){
     
@@ -256,7 +258,7 @@ int main(){
    
     // ! 7.
     // ? MAD LIBS GAME
-    
+    /*
     char noun[50] = "";
     char verb[50] = "";
     char adjective1[50] = "";
@@ -287,6 +289,50 @@ int main(){
     printf("Today i went to the %s zoo.\n", adjective1);
     printf("I saw a %s %s.\n", adjective2, noun);
     printf("It was so %s that i %s.\n", adjective3, verb);
-
+    */
+   
+    // ! 8.
+    // ? Math Functions = #include <math.h>
+    /*
+    float x = 3.3;
+    int y = -3;
+    
+    // * it will return the square root of x
+    x = sqrt(x);
+    
+    // * it will return the cube root of x
+    x = pow(x, 2);
+    
+    // * it will return the round of x
+    x = round(x);
+    
+    // * it will return the ceil of x
+    x = ceil(x);
+    
+    // * it will return the floor of x
+    x = floor(x);
+        
+    // * it will return the natural logarithm of x
+    x = log(x);
+    
+    // * it will return the sine of x
+    x = sin(x);
+    
+    // * it will return the cosine of x
+    x = cos(x);
+    
+    // * it will return the tangent of x
+    x = tan(x);
+    
+    // * it will return the absolute value of x
+    y = abs(y); // = #include <stdlib.h>
+    
+    printf("%f \n", x);
+    printf("%d \n", y);
+    */
+   
+    // ! 9.
+    
     return 0;
+    
 }
