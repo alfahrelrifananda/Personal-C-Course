@@ -333,6 +333,7 @@ int main(){
    
     // ! 9.
     // ? CIRCLE CALCULATOR PROGRAM
+    /*
     double radius = 0.0;
     double area = 0.0;
     double surfaceArea = 0.0;
@@ -350,6 +351,35 @@ int main(){
     printf("The area = %.2f \n", area);
     printf("The surface area = %.2f \n", surfaceArea);
     printf("The volume =  %.2f \n", volume);
+    */
+    
+    // ! 10.
+    // ? COMPOUND INTEREST CALCULATOR
+    double principal = 0.0;
+    double rate = 0.0;
+    int years = 0;
+    int timesCompounded = 0;
+    double total = 0.0;
+    
+    printf("==================\n");
+    printf("COMPOUND INTEREST\n");
+    printf("==================\n");
+    printf("Enter the principal (P) : ");
+    scanf("%lf", &principal);
+    
+    printf("Enter the rate (r) : ");
+    scanf("%lf", &rate);
+    rate = rate / 100;
+    
+    printf("Enter the number of years (t) : ");
+    scanf("%d", &years);
+    
+    printf("Enter the times compounded (n) : ");
+    scanf("%d", &timesCompounded);
+    
+    total = principal * pow(1 + rate / timesCompounded, timesCompounded * years);
+    
+    printf("After %d years, the total is $%.2f\n", years, total);
     
     return 0;
     
