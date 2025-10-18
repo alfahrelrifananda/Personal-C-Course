@@ -402,7 +402,7 @@ int main(){
    
     // ! 12.
     // ? WEIGHT CONVERSION PROGRAM
-    
+    /*
     int choice = 0;
     float pounds = 0.0f;
     float kilograms = 0.0f;
@@ -428,7 +428,34 @@ int main(){
     } else {
         printf("Invalid choice please enter 1 or 2 \n");
     }
+    */
+    // ? HEIGHT CONVERSION PROGRAM
+
+    int choice2 = 0;
+    float feet = 0.0f;
+    float centimeters = 0.0f;
     
+    printf("=========================\n");
+    printf("HEIGHT CONVERSION PROGRAM \n");
+    printf("=========================\n");
+    printf("1 - Feet to Centimeters\n");
+    printf("2 - Centimeters to Feet\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice2);
+    
+    if (choice2 == 1) {
+        printf("Enter the height in feet: ");
+        scanf("%f", &feet);
+        centimeters = feet * 30.48;
+        printf("%.2f feet is equal to %.2f centimeters \n", feet, centimeters);
+    } else if (choice2 == 2) {
+        printf("Enter the height in centimeters: ");
+        scanf("%f", &centimeters);
+        feet = centimeters / 30.48;
+        printf("%.2f centimeters is equal to %.2f feet \n", centimeters, feet);
+    } else {
+        printf("Invalid choice please enter 1 or 2 \n");
+    }
     
     return 0;
     
