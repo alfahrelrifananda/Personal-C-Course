@@ -292,7 +292,7 @@ int main(){
     */
    
     // ! 8.
-    // ? Math Functions = #include <math.h>
+    // ? Math Functions = #include <math.h> and need to use -lm after gcc
     /*
     float x = 3.3;
     int y = -3;
@@ -332,6 +332,24 @@ int main(){
     */
    
     // ! 9.
+    // ? CIRCLE CALCULATOR PROGRAM
+    double radius = 0.0;
+    double area = 0.0;
+    double surfaceArea = 0.0;
+    double volume = 0.0;
+    // * if you use CONST make sure the name is in capital
+    const double PI = 3.14;
+    
+    printf("Enter the radius : ");
+    scanf("%lf", &radius);
+    
+    area = PI * pow(radius, 2);
+    surfaceArea = 4 * PI * pow(radius, 2);
+    volume = PI * pow(radius, 3);
+    
+    printf("The area = %.2f \n", area);
+    printf("The surface area = %.2f \n", surfaceArea);
+    printf("The volume =  %.2f \n", volume);
     
     return 0;
     
