@@ -430,7 +430,7 @@ int main(){
     }
     */
     // ? HEIGHT CONVERSION PROGRAM
-
+    /*
     int choice2 = 0;
     float feet = 0.0f;
     float centimeters = 0.0f;
@@ -455,6 +455,36 @@ int main(){
         printf("%.2f centimeters is equal to %.2f feet \n", centimeters, feet);
     } else {
         printf("Invalid choice please enter 1 or 2 \n");
+    }
+    */
+   
+    // ! 13.
+    // ? TEMPERATURE CONVERSION PROGRAM
+    
+    char choice = '\0';
+    float fahrenheit = 0.0f;
+    float celsius = 0.0f;
+    
+    printf("==============================\n");
+    printf("TEMPERATURE CONVERSION PROGRAM \n");
+    printf("==============================\n");
+    printf("F - Fahrenheit to Celsius\n");
+    printf("C - Celsius to Fahrenheit\n");
+    printf("Enter your choice is it F or C: ");
+    scanf("%c", &choice);
+    
+    if (choice == 'F') {
+        printf("Enter the temperature in fahrenheit: ");
+        scanf("%f", &fahrenheit);
+        celsius = (fahrenheit - 32) * 5.0 / 9.0;
+        printf("%.2f fahrenheit is equal to %.2f celsius \n", fahrenheit, celsius);
+    } else if (choice == 'C') {
+        printf("Enter the temperature in celsius: ");
+        scanf("%f", &celsius);
+        fahrenheit = (celsius * 9.0 / 5.0) + 32;
+        printf("%.2f celsius is equal to %.2f fahrenheit \n", celsius, fahrenheit);
+    } else {
+        printf("Invalid choice please enter C or F \n");
     }
     
     return 0;
