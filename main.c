@@ -526,7 +526,7 @@ int main(){
    
     // ! 15.
     // ? Nested if statement
-    
+    /*
     float price = 30.0;
     bool isStudent = false;
     bool isSenior = true;
@@ -546,7 +546,49 @@ int main(){
     }
     
     printf("The price is $%.2f \n", price);
-        
+    */
+   
+    // ! 16.
+    // ? CALCULATOR PROGRAM USING SWITCH STATEMENT
+    
+    char operator = '\0';
+    double num1 = 0.0;
+    double num2 = 0.0;
+    double result = 0.0;
+
+    printf("Enter the operator ( + - * / ) : ", num1);
+    scanf("%c", &operator);
+    
+    printf("Enter the first number : ");
+    scanf("%lf", &num1);
+    
+    printf("Enter the second number : ");
+    scanf("%lf", &num2);
+    
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+        case '-':
+            result = num1 - num2;
+            break;
+        case '*':
+            result = num1 * num2;
+            break;
+        case '/':
+            if (num2 == 0)
+            {
+                printf("You cannot divide by zero \n");
+            } else {
+                result = num1 / num2;
+            }
+            break;
+        default:
+            printf("Invalid operator please enter + - * / \n");
+            break;
+    }
+    
+    printf("The result is %.2f \n", result);
     
     return 0;
 }
