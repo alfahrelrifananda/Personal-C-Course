@@ -490,7 +490,7 @@ int main(){
    
     // ! 14.
     // ? Switch Statement
-    
+    /*
     int dayOfTheWeek = 0;
     
     printf("Enter the day of the week (1-7): ");
@@ -522,5 +522,31 @@ int main(){
             printf("Invalid day! Please enter a number between 1 and 7\n");
             break;
     }
+    */
+   
+    // ! 15.
+    // ? Nested if statement
+    
+    float price = 30.0;
+    bool isStudent = false;
+    bool isSenior = true;
+    
+    if (isStudent) {
+        if(isSenior) {
+            printf("You got a student discount of $5.00 \n");        
+            printf("You got a senior discount of $10.00 \n");
+            price -= 15.0;
+        } else {
+            printf("You got a student discount of $5.00 \n");
+            price -= 5.0;
+        }
+    } else if (isSenior) {
+        printf("You got a senior discount of $10.00 \n");
+        price -= 10.0;
+    }
+    
+    printf("The price is $%.2f \n", price);
+        
+    
     return 0;
 }
