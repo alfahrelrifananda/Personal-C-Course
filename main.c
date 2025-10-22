@@ -4,6 +4,14 @@
 #include <string.h>
 #include <math.h>
 
+void happyBirthday(char name[], int age) {
+    printf("Happy birthday to you \n");
+    printf("Happy birthday to you \n");
+    printf("Happy birthday dear %s \n", name);
+    printf("Happy birthday to you \n");
+    printf("You are %d years old \n", age);
+}
+
 int main(){
     
     // ! 1.
@@ -593,9 +601,9 @@ int main(){
    
     // ! 17.
     // ? Logical Operators
-    
+    /*
     // * &&
-    int temp = 5;
+    int temp = 35;
     
     if (temp > 0 && temp < 33) {
         printf("The weather is GOOD \n");
@@ -604,7 +612,7 @@ int main(){
     }
     
     // * ||
-    int age = 0;
+    int age = 20;
     
     if (age >= 10 || age <= 20) {
         printf("You are a TEENAGER \n");
@@ -613,13 +621,29 @@ int main(){
     }
     
     // * !
-    bool isSunny = true;
+    bool isSunny = false;
     
     if (!isSunny) {
         printf("It is RAINING outside \n");
     } else {
         printf("It is SUNNY outside \n");
     }
+    */
+   
+    // ! 18.
+    // ? Functions = in C you need to declare it before Main()
+    char name[50] = "";
+    int age = 0;
+    
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';
+    
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    
+    happyBirthday(name, age);
     
     return 0;
 }
+
