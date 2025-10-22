@@ -550,7 +550,7 @@ int main(){
    
     // ! 16.
     // ? CALCULATOR PROGRAM USING SWITCH STATEMENT
-    
+    /*
     char operator = '\0';
     double num1 = 0.0;
     double num2 = 0.0;
@@ -589,6 +589,37 @@ int main(){
     }
     
     printf("The result is %.2f \n", result);
+    */
+   
+    // ! 17.
+    // ? Logical Operators
+    
+    // * &&
+    int temp = 5;
+    
+    if (temp > 0 && temp < 33) {
+        printf("The weather is GOOD \n");
+    } else {
+        printf("The weather is BAD \n");
+    }
+    
+    // * ||
+    int age = 0;
+    
+    if (age >= 10 || age <= 20) {
+        printf("You are a TEENAGER \n");
+    } else {
+        printf("You are not a TEENAGER \n");
+    }
+    
+    // * !
+    bool isSunny = true;
+    
+    if (!isSunny) {
+        printf("It is RAINING outside \n");
+    } else {
+        printf("It is SUNNY outside \n");
+    }
     
     return 0;
 }
