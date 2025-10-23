@@ -12,6 +12,11 @@ void happyBirthday(char name[], int age) {
     printf("You are %d years old \n", age);
 }
 
+int square(int num) {
+    int result = num * num;
+    return result;
+}
+
 int main(){
     
     // ! 1.
@@ -632,6 +637,7 @@ int main(){
    
     // ! 18.
     // ? Functions = in C you need to declare it before Main()
+    /*
     char name[50] = "";
     int age = 0;
     
@@ -643,6 +649,14 @@ int main(){
     scanf("%d", &age);
     
     happyBirthday(name, age);
+    */
+   
+    // ! 19.
+    // ? Return keyword = return a value from a function
+    printf("The square of 3 is %d \n", square(3));
+    printf("The square of 4 is %d \n", square(4));
+    printf("The square of 5 is %d \n", square(5));
+    
     
     return 0;
 }
