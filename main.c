@@ -4,6 +4,8 @@
 #include <string.h>
 #include <math.h>
 
+// int result = 3; // * GLOBAL SCOPE VARIABLE (hard to debug)
+
 void happyBirthday(char name[], int age) {
     printf("Happy birthday to you \n");
     printf("Happy birthday to you \n");
@@ -14,6 +16,11 @@ void happyBirthday(char name[], int age) {
 
 int square(int num) {
     int result = num * num;
+    return result;
+}
+
+int add(int x, int y) {
+    int result = x + y;
     return result;
 }
 
@@ -653,10 +660,21 @@ int main(){
    
     // ! 19.
     // ? Return keyword = return a value from a function
+    /*
     printf("The square of 3 is %d \n", square(3));
     printf("The square of 4 is %d \n", square(4));
     printf("The square of 5 is %d \n", square(5));
+    */
+   
+    // ! 20.
+    // ? Variable scope
     
+    // GLOBAL SCOPE
+    // printf("%d", result);
+    
+    // LOCAL SCOPE
+    int result = add(3, 4);
+    printf("%d", result);
     
     return 0;
 }
