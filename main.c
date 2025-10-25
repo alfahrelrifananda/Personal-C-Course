@@ -713,7 +713,6 @@ int main(){
     printf("Hello %s \n", name);
     */
     // * DO WHILE LOOP
-    /*
     char name[50] = "";
     
     do {
@@ -723,7 +722,6 @@ int main(){
     } while (strlen(name) == 0);
     
     printf("Hello %s \n", name);
-    */
 
     return 0;
 }
