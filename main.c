@@ -683,6 +683,7 @@ int main(){
    
     // ! 21.
     // ? Function prototype = declare first define later(after main)
+    /*
     hello("Spongebob", 30);
     
     if (ageCheck(30))
@@ -692,8 +693,25 @@ int main(){
     else {
         printf("You are NOT old enough to work at the Krusty Krab \n");
     }
+    */
+   
+    // ! 22.
+    // ? While loops
+
+    char name[50] = "";
     
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = '\0';
     
+    while (strlen(name) == 0) {
+        printf("You DID NOT enter your name\n");
+        printf("Enter your name: ");
+        fgets(name, sizeof(name), stdin);
+        name[strlen(name) - 1] = '\0';
+    }
+    
+    printf("Hello %s \n", name);
     
     return 0;
 }
