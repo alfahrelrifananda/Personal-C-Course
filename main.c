@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <math.h>
+#include <time.h> // srand
 #include <unistd.h>
 
 // int result = 3; // * GLOBAL SCOPE VARIABLE (hard to debug)
@@ -830,12 +831,32 @@ int main(){
    
     // * 3. Exercise
     // Print * as a triangle
+    /*
     for (int i = 1; i <= 5; i++) {
         for (int j = 1; j <= i; j++) {
             printf("* ");
         }
         printf("\n");
     }
+    */
+   
+    // ! 26.
+    // Random Number
+    // * Its actually a pseudo random number = not real random
+    // * Need #include <time.h> and #include <stdlib.h>
+    // * this is the seed = it use the current time
+    // * if not use the seed it will generate the same number
+    srand(time(NULL));
+    
+    int min = 1;
+    int max = 100;
+    
+    // General formula to generate a random number
+    int randomNumber1 = (rand() % (max - min + 1)) + min;
+    int randomNumber2 = (rand() % (max - min + 1)) + min;
+    int randomNumber3 = (rand() % (max - min + 1)) + min;
+    
+    printf("%d %d %d", randomNumber1, randomNumber2, randomNumber3);
     
     return 0;
 }
