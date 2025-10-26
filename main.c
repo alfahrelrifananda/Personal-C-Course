@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <math.h>
+#include <unistd.h>
 
 // int result = 3; // * GLOBAL SCOPE VARIABLE (hard to debug)
 
@@ -713,6 +714,7 @@ int main(){
     printf("Hello %s \n", name);
     */
     // * DO WHILE LOOP
+    /*
     char name[50] = "";
     
     do {
@@ -722,7 +724,24 @@ int main(){
     } while (strlen(name) == 0);
     
     printf("Hello %s \n", name);
-
+    */
+   
+    // ! 23.
+    // ? For loop
+    /*
+    for (int i = 0; i < 10; i++) {
+        printf("%d \n", i);
+    }
+    */
+    
+    // * Using Thread
+    
+    for (int i = 10; i > 0; i--) {
+        sleep(1);
+        printf("%d \n", i);
+    }
+    
+    printf("Happy new year \n");
     return 0;
 }
 
