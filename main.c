@@ -746,7 +746,7 @@ int main(){
    
     // ! 24.
     // ? Break and Continue
-    
+    /*
     for (int i = 1; i <= 10; i++)
     {
         if (i == 3)
@@ -760,6 +760,81 @@ int main(){
         }
         
         printf("%d \n", i);
+    }
+    */
+   
+    // ! 25.
+    // ? Nested Loops
+    
+    // * Instead of doing these
+    /*
+    for (int i = 1; i <= 10; i++) {
+        printf("%d ", i);
+    }
+    
+    printf("\n");
+    
+    for (int i = 1; i <= 10; i++) {
+        printf("%d ", i);
+    }
+
+    printf("\n");
+    
+    for (int i = 1; i <= 10; i++) {
+        printf("%d ", i);
+    }
+    */
+   
+    // * Do this
+    /*
+    for (int i = 1; i <= 3; i++) {
+        for (int j = 1; j <= 10; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+    */
+   
+    // * 1. Exercise
+    /*
+    int column = 0;
+    int row = 0;
+    char symbol = '\0';
+    
+    printf("Enter the number of rows: ");
+    scanf("%d", &row);
+    
+    printf("Enter the number of columns: ");
+    scanf("%d", &column);
+    
+    printf("Enter the symbol: ");
+    scanf(" %c", &symbol);
+    
+    for (int i = 1; i <= row; i++) {
+        for (int j = 1; j <= column; j++) {
+            printf("%c ", symbol);
+        }
+        printf("\n");
+    }
+    */
+   
+    // * 2. Exercise
+    /*
+    for (int i = 1; i <= 10; i++) {
+        for (int j = 1; j <= 10; j++) {
+            printf("%3d ", i * j);
+        }
+        printf("\n");
+    }
+    */
+   
+    // * 3. Exercise
+    // Print * as a triangle
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
     }
     
     return 0;
