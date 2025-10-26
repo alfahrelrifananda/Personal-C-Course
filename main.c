@@ -735,13 +735,33 @@ int main(){
     */
     
     // * Using Thread
-    
+    /*
     for (int i = 10; i > 0; i--) {
         sleep(1);
         printf("%d \n", i);
     }
     
     printf("Happy new year \n");
+    */
+   
+    // ! 24.
+    // ? Break and Continue
+    
+    for (int i = 1; i <= 10; i++)
+    {
+        if (i == 3)
+        {
+            continue; // * SKIP the loop
+        }
+        
+        if (i == 7)
+        {
+            break; // * STOP the loop
+        }
+        
+        printf("%d \n", i);
+    }
+    
     return 0;
 }
 
