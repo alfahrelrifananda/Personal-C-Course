@@ -846,18 +846,51 @@ int main(){
     // * Need #include <time.h> and #include <stdlib.h>
     // * this is the seed = it use the current time
     // * if not use the seed it will generate the same number
+    /*
     srand(time(NULL));
     
     int min = 1;
     int max = 100;
-    
+    */
     // General formula to generate a random number
+    /*
     int randomNumber1 = (rand() % (max - min + 1)) + min;
     int randomNumber2 = (rand() % (max - min + 1)) + min;
     int randomNumber3 = (rand() % (max - min + 1)) + min;
     
     printf("%d %d %d", randomNumber1, randomNumber2, randomNumber3);
+    */
+   
+    // ! 27.
+    // ? NUMBER GUESSING GAME
     
+    srand(time(NULL));
+    
+    int guess = 0;
+    int tries = 0;
+    int min = 1;
+    int max = 100;
+    int answer = rand() % (max - min + 1) + min;
+    printf("=========== NUMBER GUESSING GAME ============ \n");
+    
+    do {
+        printf("Guess the number between %d and %d: ", min, max);
+        scanf("%d", &guess);
+        tries++;
+        
+        if (guess < answer) {
+            printf("to LOW \n");
+        } else if (guess > answer) {
+            printf("to HIGH \n");
+        } else {
+            printf("CORRECT! \n");
+            break;
+        }
+    } while (guess != answer);
+    
+    printf("The number was %d \n", answer);
+    printf("It took you %d tries \n", tries);
+
     return 0;
 }
 
