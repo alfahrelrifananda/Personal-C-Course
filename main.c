@@ -34,6 +34,10 @@ int userChoice();
 int computerChoice();
 void checkWinner(int userChoice, int computerChoice);
 
+float checkBalance(float balance);
+float deposit();
+float withdraw(float balance);
+
 int main(){
 
     // ! 1.
@@ -898,6 +902,7 @@ int main(){
    
     // ! 28.
     // ? ROCK PAPER SCISSORS GAME
+    /*
     srand(time(NULL));
     int userC = userChoice();
     int computerC = computerChoice();
@@ -934,8 +939,76 @@ int main(){
     }
     
     checkWinner(userC, computerC);
+    */
+   
+    // ! 29.
+    // ? BANK PROGRAM
+    float balance = 0.0f;
+    int choice = 0;
+
+    do {
+        printf("=========== BANK PROGRAM ============ \n");
+        printf("\n1. Check balance\n");
+        printf("2. Deposit\n");
+        printf("3. Withdraw\n");
+        printf("4. Exit\n");
+        printf("\nEnter your choice (1-4): ");
+        
+        scanf("%d", &choice);
+        switch (choice) {
+        case 1:
+            balance = checkBalance(balance);
+            break;
+        case 2:
+            balance += deposit();
+            break;
+        case 3:
+            balance -= withdraw(balance);
+            break;
+        case 4:
+            printf("=========== Thank you for using our bank program ============ \n");
+            break;
+        default:
+            printf("Invalid choice please enter 1 2 3 or 4 \n");
+            break;
+        }   
+    } while (choice != 4);
     
     return 0;
+}
+
+float checkBalance(float balance) {
+    printf("Your balance is Rp.%.2f \n", balance);
+    return balance;
+}
+float deposit() {
+    float amount = 0.0f;
+    printf("Enter the amount to deposit: Rp.");
+    scanf("%f", &amount);
+    
+    if (amount < 0) {
+        printf("Invalid amount please enter a positive number \n");
+        return 0.0;
+    } else {
+        printf("Successfully deposited Rp.%.2f \n", amount);
+        return amount;
+    }
+}
+float withdraw(float balance) {
+    float amount = 0.0f;
+    printf("Enter the amount to withdraw: Rp.");
+    scanf("%f", &amount);
+    
+    if (amount < 0) {
+        printf("Invalid amount please enter a positive number \n");
+        return 0.0;
+    } else if (amount > balance) {
+        printf("Insufficient funds your balance is Rp. %.2f \n", balance);
+        return 0.0;
+    } else {
+        printf("Successfully withdrawn Rp. %.2f \n", amount);
+        return amount;
+    }
 }
 
 int userChoice() {
