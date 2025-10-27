@@ -30,6 +30,10 @@ int add(int x, int y) {
 void hello(char name[], int age);
 bool ageCheck(int age);
 
+int userChoice();
+int computerChoice();
+void checkWinner(int userChoice, int computerChoice);
+
 int main(){
 
     // ! 1.
@@ -863,7 +867,7 @@ int main(){
    
     // ! 27.
     // ? NUMBER GUESSING GAME
-    
+    /*
     srand(time(NULL));
     
     int guess = 0;
@@ -890,8 +894,79 @@ int main(){
     
     printf("The number was %d \n", answer);
     printf("It took you %d tries \n", tries);
-
+    */
+   
+    // ! 28.
+    // ? ROCK PAPER SCISSORS GAME
+    srand(time(NULL));
+    int userC = userChoice();
+    int computerC = computerChoice();
+    
+   
+    switch (userC) {
+        case 1:
+            printf("You chose rock \n");
+            break;
+        case 2:
+            printf("You chose paper \n");
+            break;
+        case 3:
+            printf("You chose scissors \n");
+            break;
+        default:
+            printf("Invalid choice please enter 1 2 or 3 \n");
+            break;
+    }
+    
+    switch (computerC) {
+        case 1:
+            printf("Computer chose rock \n");
+            break;
+        case 2:
+            printf("Computer chose paper \n");
+            break;
+        case 3:
+            printf("Computer chose scissors \n");
+            break;
+        default:
+            printf("Invalid choice please enter 1 2 or 3 \n");
+            break;
+    }
+    
+    checkWinner(userC, computerC);
+    
     return 0;
+}
+
+int userChoice() {
+    int choice = 0;
+    do {
+        printf("===== ROCK PAPER SCISSORS GAME ===== \n");
+        printf("1. Rock\n");
+        printf("2. Paper\n");
+        printf("3. Scissors\n");
+        printf("Enter your choice (1-3): ");
+        scanf("%d", &choice);
+    } while (choice < 1 || choice > 3);
+    
+    return choice;
+}
+int computerChoice() {
+    srand(time(NULL));
+    return rand() % 3 + 1;
+}
+void checkWinner(int userChoice, int computerChoice) {
+    if (userChoice == computerChoice) {
+        printf("It's a tie \n");
+    } else if (userChoice == 1 && computerChoice == 2) {
+        printf("You win \n");
+    } else if (userChoice == 2 && computerChoice == 3) {
+        printf("You win \n");
+    } else if (userChoice == 3 && computerChoice == 1) {
+        printf("You win \n");
+    } else {
+        printf("You lose \n");
+    }
 }
 
 void hello(char name[], int age)
