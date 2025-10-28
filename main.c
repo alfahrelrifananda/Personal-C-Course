@@ -943,6 +943,7 @@ int main(){
    
     // ! 29.
     // ? BANK PROGRAM
+    /*
     float balance = 0.0f;
     int choice = 0;
 
@@ -973,7 +974,46 @@ int main(){
             break;
         }   
     } while (choice != 4);
+    */
+   
+    // ! 30.
+    // ? Array
     
+    int number[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    char letter[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
+    char name[] = "Fahrel";
+    
+    // * Change the value
+    number[0] = 100;
+    number[1] = 200;
+    number[2] = 300;
+    number[3] = 400;
+    
+    printf("%d \n", number[0]);
+    printf("%d \n", number[1]);
+    printf("%d \n", number[2]);
+    printf("%d \n", number[3]);
+    
+    // * Print array common way
+    
+    int sizeNumber = sizeof(number) / sizeof(number[0]);
+    int sizeLetter = sizeof(letter) / sizeof(letter[0]);
+    int sizeName = sizeof(name) / sizeof(name[0]);
+    
+    
+    for (int i = 0; i < sizeNumber; i++) {
+        printf("%d ", number[i]);
+    }
+    
+    printf("\n");
+    for (int i = 0; i < sizeLetter; i++) {
+        printf("%c ", letter[i]);
+    }
+    printf("\n");
+    for (int i = 0; i < sizeName; i++) {
+        printf("%c ", name[i]);
+    }
+
     return 0;
 }
 
