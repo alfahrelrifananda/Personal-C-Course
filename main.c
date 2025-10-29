@@ -978,7 +978,7 @@ int main(){
    
     // ! 30.
     // ? Array
-    
+    /*
     int number[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     char letter[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
     char name[] = "Fahrel";
@@ -1012,6 +1012,40 @@ int main(){
     printf("\n");
     for (int i = 0; i < sizeName; i++) {
         printf("%c ", name[i]);
+    }
+    */
+   
+    // ! 31.
+    // ? Array and user input
+    
+    int scores[5] = {0};
+    
+    /*
+    
+    printf("Enter scores: ");
+    scanf("%d", &scores[0]);
+    
+    printf("Enter scores: ");
+    scanf("%d", &scores[1]);
+    
+    printf("Enter scores: ");
+    scanf("%d", &scores[2]);
+    
+    printf("Enter scores: ");
+    scanf("%d", &scores[3]);
+    
+    printf("Enter scores: ");
+    scanf("%d", &scores[4]);
+    
+    */
+    
+    for (int i = 0; i < 5; i++) {
+        printf("Enter scores : ");
+        scanf("%d", &scores[i]);
+    }
+    
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", scores[i]);
     }
 
     return 0;
