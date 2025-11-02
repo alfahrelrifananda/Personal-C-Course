@@ -1038,7 +1038,8 @@ int main(){
     scanf("%d", &scores[4]);
     
     */
-    
+   
+    /*
     for (int i = 0; i < 5; i++) {
         printf("Enter scores : ");
         scanf("%d", &scores[i]);
@@ -1046,6 +1047,54 @@ int main(){
     
     for (int i = 0; i < 5; i++) {
         printf("%d ", scores[i]);
+    }
+    */
+   
+    // ! 32.
+    // ? 2D Array
+    
+    // * This will error = we need to initialize the length of the column
+    // int number[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    
+    int number[][3] = {{1, 2, 3}, 
+                       {4, 5, 6},
+                       {7, 8, 9},
+                       {10, 11, 12}};
+    
+    /*
+    printf("%d ", number[0][0]);
+    printf("%d ", number[0][1]);
+    printf("%d ", number[0][2]);
+    printf("\n");
+    printf("%d ", number[1][0]);
+    printf("%d ", number[1][1]);
+    printf("%d ", number[1][2]);
+    printf("\n");
+    printf("%d ", number[2][0]);
+    printf("%d ", number[2][1]);
+    printf("%d ", number[2][2]);
+    printf("\n");
+    */
+   
+    // * Best way to print 2D array
+    for (int i = 0; i < 4; i++) { // * Row
+        for (int j = 0; j < 3; j++) { // * Column
+            printf("%d ", number[i][j]);
+        }
+        printf("\n");
+    }
+    
+    // * Exercise
+    char numPad[10][3] = {{'1', '2', '3'},
+                          {'4', '5', '6'},
+                          {'7', '8', '9'},
+                          {'*', '0', '#'}};
+    
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%c ", numPad[i][j]);
+        }
+        printf("\n");
     }
 
     return 0;
@@ -1118,7 +1167,7 @@ void checkWinner(int userChoice, int computerChoice) {
 
 void hello(char name[], int age)
 {
-    printf("Hello %s \n", name);
+    printf("Hello %s \n", name);    
     printf("You are %d years old \n", age);
 }
 
