@@ -1095,6 +1095,7 @@ int main(){
             printf("%c ", numPad[i][j]);
         }
         printf("\n");
+        
     }
 
     return 0;
