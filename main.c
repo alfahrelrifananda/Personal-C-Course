@@ -1052,10 +1052,10 @@ int main(){
    
     // ! 32.
     // ? 2D Array
-    
     // * This will error = we need to initialize the length of the column
     // int number[][] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
     
+    /*
     int number[][3] = {{1, 2, 3}, 
                        {4, 5, 6},
                        {7, 8, 9},
@@ -1077,6 +1077,7 @@ int main(){
     printf("\n");
     */
    
+    /*
     // * Best way to print 2D array
     for (int i = 0; i < 4; i++) { // * Row
         for (int j = 0; j < 3; j++) { // * Column
@@ -1098,7 +1099,36 @@ int main(){
         printf("\n");
         
     }
-
+    */
+   
+    // ! 33.
+    // ? Array of strings
+    /*
+    char fruits[][10] = {"Apple", "Banana", "Orange", "Grapes", "Mango"};
+    int sizeFruits = sizeof(fruits) / sizeof(fruits[0]);
+    
+    fruits[0][0] = 'e';
+    fruits[0][4] = 'A';
+    
+    for (int i = 0; i < sizeFruits; i++) {
+        printf("%s \n", fruits[i]);
+    }
+    */
+   
+    // Accepting user input
+    char name[3][10] = {0};
+    int sizeName = sizeof(name) / sizeof(name[0]);
+    
+    for (int i = 0; i <= sizeName; i++) {
+        printf("Enter your name: ");
+        fgets(name[i], sizeof(name[i]), stdin);
+        name[i][strlen(name[i]) - 1] = '\0';
+    }
+    
+    for (int i = 0; i <= sizeName; i++) {
+        printf("Hello %s \n", name[i]);
+    }
+    
     return 0;
 }
 
