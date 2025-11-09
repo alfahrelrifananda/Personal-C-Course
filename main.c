@@ -5,6 +5,7 @@
 #include <math.h>
 #include <time.h> // srand
 #include <unistd.h>
+#include <ctype.h>
 
 // int result = 3; // * GLOBAL SCOPE VARIABLE (hard to debug)
 
@@ -1116,6 +1117,7 @@ int main(){
     */
    
     // Accepting user input
+    /*
     char name[3][10] = {0};
     int sizeName = sizeof(name) / sizeof(name[0]);
     
@@ -1128,6 +1130,46 @@ int main(){
     for (int i = 0; i <= sizeName; i++) {
         printf("Hello %s \n", name[i]);
     }
+    */
+   
+    // ! 34.
+    // ? QUIZ GAME
+    
+    char question[][100] = {"\nWhat is the largest planet in the solar system?", 
+        "\nWhat is the smallest planet in the solar system?", 
+        "\nWhat is the hottest planet in the solar system?", 
+        "\nIs earth flat?",
+        "\nWhat is the meaning of life?"};
+    
+    char options[][100] = {"\nA. Mercury\nB. Venus\nC. Mars\nD. Jupiter",              "\nA. Venus\nB. Earth\nC. Mercury\nD. Jupiter",
+                           "\nA. Mars\nB. Venus\nC. Earth\nD. Jupiter",
+                           "\nA. Yes\nB. No\nC. Maybe\nD. Sometimes",
+                           "\nA. Boobs\nB. Titties\nC. Food\nD. God"};
+    char answerKey[] = {'D', 'C', 'B', 'A', 'A'};
+    
+    int sizeQuestion = sizeof(question) / sizeof(question[0]);
+    
+    char guess = '\0';
+    int score = 0;
+    
+    for (int i = 0; i < sizeQuestion; i++) {
+        printf("%s \n", question[i]);
+        printf("%s \n", options[i]);
+        
+        printf("\nENTER YOUR ANSWER: ");
+        scanf(" %c", &guess);
+        
+        guess = toupper(guess); // #include <ctype.h>
+        
+        if (guess == answerKey[i]) {
+            score++;
+            printf("CORRECT \n");
+        } else {
+            printf("WRONG \n");
+        }
+    }
+    
+    printf("Your score is %d out of %d \n", score, sizeQuestion);
     
     return 0;
 }
