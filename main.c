@@ -1187,8 +1187,8 @@ int main(){
     printf("%d is %s \n", number, (number % 2 == 0) ? "even" : "odd");
     
     int hour = 17;
-    int minute = 24;
-    char *meridian = (hour < 12) ? "AM" : "PM";
+    int minute = 26;
+    char *meridian = (hour < 12) ? "AM" : "PM"; // It use pointer because it is a string
     
     printf("%d:%d %s \n", hour, minute, meridian);
     
