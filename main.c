@@ -1194,8 +1194,7 @@ int main(){
     
     // Much better using meridian above
     // printf("%d:%d %s \n", hour, minute, (hour < 12) ? "AM" : "PM");
-    
-    
+
     return 0;
 }
 
