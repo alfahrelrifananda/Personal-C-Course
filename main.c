@@ -1018,11 +1018,9 @@ int main(){
    
     // ! 31.
     // ? Array and user input
-    
-    int scores[5] = {0};
-    
     /*
     
+    int scores[5] = {0};
     printf("Enter scores: ");
     scanf("%d", &scores[0]);
     
@@ -1134,7 +1132,7 @@ int main(){
    
     // ! 34.
     // ? QUIZ GAME
-    
+    /*
     char question[][100] = {"\nWhat is the largest planet in the solar system?", 
         "\nWhat is the smallest planet in the solar system?", 
         "\nWhat is the hottest planet in the solar system?", 
@@ -1170,6 +1168,33 @@ int main(){
     }
     
     printf("Your score is %d out of %d \n", score, sizeQuestion);
+    */
+   
+    // ! 35.
+    // ? Ternary Operator
+    // ? (condition) ? value_if_true : value_if_false
+    int a = 10;
+    int b = 20;
+    int max = (a > b) ? a : b;
+    
+    printf("%d \n", max);
+    
+    // Using boolean
+    bool isOnline = true;
+    printf("%s \n", (isOnline) ? "Online" : "Offline"); // It return string
+
+    int number = 10;
+    printf("%d is %s \n", number, (number % 2 == 0) ? "even" : "odd");
+    
+    int hour = 17;
+    int minute = 24;
+    char *meridian = (hour < 12) ? "AM" : "PM";
+    
+    printf("%d:%d %s \n", hour, minute, meridian);
+    
+    // Much better using meridian above
+    // printf("%d:%d %s \n", hour, minute, (hour < 12) ? "AM" : "PM");
+    
     
     return 0;
 }
