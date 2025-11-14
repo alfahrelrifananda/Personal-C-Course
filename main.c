@@ -39,6 +39,11 @@ float checkBalance(float balance);
 float deposit();
 float withdraw(float balance);
 
+// * typedef;
+typedef int Number;
+typedef char String[100];
+typedef char initial[10];
+
 int main(){
 
     // ! 1.
@@ -1173,6 +1178,7 @@ int main(){
     // ! 35.
     // ? Ternary Operator
     // ? (condition) ? value_if_true : value_if_false
+    /*
     int a = 10;
     int b = 20;
     int max = (a > b) ? a : b;
@@ -1194,7 +1200,21 @@ int main(){
     
     // Much better using meridian above
     // printf("%d:%d %s \n", hour, minute, (hour < 12) ? "AM" : "PM");
-
+    */
+    
+    // ! 36.
+    // ? Typedef = create a new type
+    // ? typedef existing_type new_name;
+    // ? rename data type to something else
+    
+    Number myNumber = 33;
+    String name = "Fahrel";
+    initial initialName = "F";
+    
+    printf("%d \n", myNumber);
+    printf("%s \n", name);
+    printf("%s \n", initialName);
+    
     return 0;
 }
 
