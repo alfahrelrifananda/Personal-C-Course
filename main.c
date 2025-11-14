@@ -39,10 +39,22 @@ float checkBalance(float balance);
 float deposit();
 float withdraw(float balance);
 
-// * typedef;
+// * typedef
 typedef int Number;
 typedef char String[100];
 typedef char initial[10];
+
+
+// * enum
+enum Day {
+    MONDAY = 1,
+    TUESDAY = 2,
+    WEDNESDAY = 3,
+    THURSDAY = 4,
+    FRIDAY = 5,
+    SATURDAY = 6,
+    SUNDAY = 7
+};
 
 int main(){
 
@@ -1206,7 +1218,7 @@ int main(){
     // ? Typedef = create a new type
     // ? typedef existing_type new_name;
     // ? rename data type to something else
-    
+    /*
     Number myNumber = 33;
     String name = "Fahrel";
     initial initialName = "F";
@@ -1214,6 +1226,26 @@ int main(){
     printf("%d \n", myNumber);
     printf("%s \n", name);
     printf("%s \n", initialName);
+    */
+    
+    // ! 37.
+    // ? Enum = It replace number with a name
+    // ? Monday = 0
+    // ? Tuesday = 1
+    // ? Wednesday = 2
+    
+    // ? But you can redeclare the number
+    // ? Monday = 1;
+    // ? Tuesday = 2;
+    // ? Wednesday = 3;
+    
+    enum Day today = FRIDAY;
+    
+    if (today == SATURDAY || today == SUNDAY) {
+        printf("Its the weekend \n");
+    } else {
+        printf("Its the workday \n");
+    }
     
     return 0;
 }
