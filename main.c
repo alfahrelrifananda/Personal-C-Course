@@ -1239,7 +1239,7 @@ int main(){
     // ? Tuesday = 2;
     // ? Wednesday = 3;
     
-    enum Day today = FRIDAY;
+    enum Day today = SATURDAY;
     
     if (today == SATURDAY || today == SUNDAY) {
         printf("Its the weekend \n");
