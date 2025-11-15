@@ -56,6 +56,16 @@ enum Day {
     SUNDAY = 7
 };
 
+// * Struct
+struct Student{
+    char name[50];
+    int age;
+    double gpa;
+    bool isFullTime;
+};
+
+void printStudent(struct Student student);
+
 int main(){
 
     // ! 1.
@@ -1238,7 +1248,7 @@ int main(){
     // ? Monday = 1;
     // ? Tuesday = 2;
     // ? Wednesday = 3;
-    
+    /*
     enum Day today = SATURDAY;
     
     if (today == SATURDAY || today == SUNDAY) {
@@ -1246,8 +1256,43 @@ int main(){
     } else {
         printf("Its the workday \n");
     }
+    */
+    
+    // ! 38.
+    // ? Struct = Similar to class
+    
+    struct Student student1 = {"Spongebob", 30, 3.5, true};
+    struct Student student2 = {"Patrick", 25, 3.0, false};
+    struct Student student3 = {"Squidward", 20, 2.5, true};
+    // * Declare a empty struct
+    struct Student student4 = {};
+    strcpy(student4.name, "Sandy");
+    student4.age = 20;
+    student4.gpa = 4.0;
+    student4.isFullTime = false;
+    
+    /*    
+    printf("%s \n", student1.name);
+    printf("%d \n", student1.age);
+    printf("%.2f \n", student1.gpa);
+    printf("%s \n", (student1.isFullTime) ? "Yes" : "No");
+    */
+
+    // * Print all the struct using function
+    printStudent(student1);
+    printStudent(student2);
+    printStudent(student3);
+    printStudent(student4);
     
     return 0;
+}
+
+void printStudent(struct Student student) {
+    printf("Name: %s \n", student.name);
+    printf("Age: %d \n", student.age);
+    printf("GPA: %.2f \n", student.gpa);
+    printf("Is full time: %s \n", (student.isFullTime) ? "Yes" : "No");
+    printf("\n");
 }
 
 float checkBalance(float balance) {
