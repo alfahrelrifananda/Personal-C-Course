@@ -64,6 +64,7 @@ struct Student{
     bool isFullTime;
 };
 
+// * Function prototype for struct
 void printStudent(struct Student student);
 
 int main(){
