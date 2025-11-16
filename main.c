@@ -1261,7 +1261,7 @@ int main(){
     
     // ! 38.
     // ? Struct = Similar to class
-    
+    /*
     struct Student student1 = {"Spongebob", 30, 3.5, true};
     struct Student student2 = {"Patrick", 25, 3.0, false};
     struct Student student3 = {"Squidward", 20, 2.5, true};
@@ -1280,11 +1280,28 @@ int main(){
     */
 
     // * Print all the struct using function
+    /*
     printStudent(student1);
     printStudent(student2);
     printStudent(student3);
     printStudent(student4);
+    */
     
+    // ! 39.
+    // ? Array of struct
+    struct Student students[] = {{"Spongebob", 30, 3.5, true},
+                                 {"Patrick", 25, 3.0, false},
+                                 {"Squidward", 20, 2.5, true}};
+    
+    int sizeStudents = sizeof(students) / sizeof(students[0]);
+    
+    for (int i = 0; i < sizeStudents; i++) {
+        printf("Name: %s \n", students[i].name);
+        printf("Age: %d \n", students[i].age);
+        printf("GPA: %.2f \n", students[i].gpa);
+        printf("Is full time: %s \n", (students[i].isFullTime) ? "Yes" : "No");
+        printf("\n");
+    }
     return 0;
 }
 
