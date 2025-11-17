@@ -67,6 +67,9 @@ struct Student{
 // * Function prototype for struct
 void printStudent(struct Student student);
 
+// * Function prototype for pointer
+int incrementAge(int* age);
+
 int main(){
 
     // ! 1.
@@ -1289,6 +1292,7 @@ int main(){
     
     // ! 39.
     // ? Array of struct
+    /*
     struct Student students[] = {{"Spongebob", 30, 3.5, true},
                                  {"Patrick", 25, 3.0, false},
                                  {"Squidward", 20, 2.5, true}};
@@ -1302,7 +1306,29 @@ int main(){
         printf("Is full time: %s \n", (students[i].isFullTime) ? "Yes" : "No");
         printf("\n");
     }
+    */
+    
+    // ! 40.
+    // ? Pointer = A variable that stores the address of another variable.
+    
+    int age = 20;
+    int *pAge = &age;
+    
+    // printf("%p", &age);
+    printf("%p \n", &age);
+    printf("%p \n", pAge);
+    
+    // pass pointer to a function
+    incrementAge(pAge);
+    printf("You are %d years old \n", age);
+    
     return 0;
+}
+
+int incrementAge(int* age) {
+    // pass by references not value
+    // dereference age
+    (*age)++;
 }
 
 void printStudent(struct Student student) {
