@@ -1310,7 +1310,7 @@ int main(){
     
     // ! 40.
     // ? Pointer = A variable that stores the address of another variable.
-    
+    /*
     int age = 20;
     int *pAge = &age;
     
@@ -1321,8 +1321,30 @@ int main(){
     // pass pointer to a function
     incrementAge(pAge);
     printf("You are %d years old \n", age);
+    */
     
-    return 0;
+    // ! 41.
+    // ? Write a file
+    
+    // * Create a file
+    FILE *pFile = fopen("output.txt", "w");
+    
+    // * Write to the file
+    char text[] = "I LOVE C";
+    
+    if (pFile == NULL) {
+        printf("Error opening file \n");
+        return 1; // Exit the program if there is error
+    } else {
+        fprintf(pFile, "%s", text);
+        printf("Text is written to the file successfully! \n");
+    }
+    
+    
+    // * Close the file
+    fclose(pFile);
+    
+    return 0; // Exit the program if there is no error
 }
 
 int incrementAge(int* age) {
