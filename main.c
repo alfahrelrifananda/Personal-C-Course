@@ -1325,7 +1325,7 @@ int main(){
     
     // ! 41.
     // ? Write a file
-    
+    /*
     // * Create a file
     FILE *pFile = fopen("output.txt", "w");
     
@@ -1342,6 +1342,25 @@ int main(){
     
     
     // * Close the file
+    fclose(pFile);
+    */
+   
+    // ! 42.
+    // ? Read a file
+    
+    FILE *pFile = fopen("input.txt", "r");
+    
+    char buffer[1024] = {0};
+    
+    if (pFile == NULL) {
+        printf("Error opening file \n");
+        return 1; // Exit the program if there is error
+    } else {
+        while (fgets(buffer, sizeof(buffer), pFile) != NULL) {
+            printf("%s", buffer);
+        }
+    }
+    
     fclose(pFile);
     
     return 0; // Exit the program if there is no error
