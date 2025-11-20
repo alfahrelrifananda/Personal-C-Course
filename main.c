@@ -1347,7 +1347,7 @@ int main(){
    
     // ! 42.
     // ? Read a file
-    
+    /*
     FILE *pFile = fopen("input.txt", "r");
     
     char buffer[1024] = {0};
@@ -1362,6 +1362,35 @@ int main(){
     }
     
     fclose(pFile);
+    */
+   
+    // ! 43.
+    // ? malloc() = its like borrowing a space in a heap memory
+    
+    int number = 0;
+    printf("Enter the number of grades: ");
+    scanf("%d", &number);
+    
+    // number * sizeof(char) means allocate number of char
+    char *grades = malloc(number * sizeof(char));
+    
+    // prevent segmentation fault
+    if (grades == NULL) {
+        printf("Error allocating memory \n");
+        return 1;
+    } else {
+        for (int i = 0; i < number; i++) {
+            printf("Enter grade #%d: ", i + 1);
+            scanf(" %c", &grades[i]);
+        }
+        
+        for (int i = 0; i < number; i++) {
+            printf("%c ", grades[i]);
+        }
+    }
+    
+    free(grades); // deallocate the memory
+    grades = NULL; // set the pointer to NULL
     
     return 0; // Exit the program if there is no error
 }
