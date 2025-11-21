@@ -1366,7 +1366,7 @@ int main(){
    
     // ! 43.
     // ? malloc() = its like borrowing a space in a heap memory
-    
+    /*
     int number = 0;
     printf("Enter the number of grades: ");
     scanf("%d", &number);
@@ -1391,7 +1391,33 @@ int main(){
     
     free(grades); // deallocate the memory
     grades = NULL; // set the pointer to NULL
+    */
+   
+    // ! 44.
+    // ? calloc() = allocate memory and set it to 0 malloc() is faster but calloc() is less bug and unexpected behavior
     
+    int number = 0;
+    printf("Enter the number of player: ");
+    scanf("%d", &number);
+    
+    int *scores = calloc(number, sizeof(int));
+    
+    if (scores == NULL) {
+        printf("Error allocating memory \n");
+        return 1;
+    } else {
+        for (int i = 0; i < number; i++) {
+            printf("Enter score #%d: ", i + 1);
+            scanf("%d", &scores[i]);
+        }
+        
+        for (int i = 0; i < number; i++) {
+            printf("%d ", scores[i]);
+        }
+    }
+    
+    free(scores); // deallocate the memory
+    scores = NULL; // set the pointer to NULL
     return 0; // Exit the program if there is no error
 }
 
