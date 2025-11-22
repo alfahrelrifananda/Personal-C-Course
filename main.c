@@ -1395,7 +1395,7 @@ int main(){
    
     // ! 44.
     // ? calloc() = allocate memory and set it to 0 malloc() is faster but calloc() is less bug and unexpected behavior
-    
+    /*
     int number = 0;
     printf("Enter the number of player: ");
     scanf("%d", &number);
@@ -1418,6 +1418,53 @@ int main(){
     
     free(scores); // deallocate the memory
     scores = NULL; // set the pointer to NULL
+    */
+   
+    // ! 45.
+    // ? realloc() = reallocate memory = resize the pointer array
+    int number = 0;
+    printf("Enter the number of prices: ");
+    scanf("%d", &number);
+    
+    float *prices = calloc(number, sizeof(float));
+    
+    if (prices == NULL) {
+        printf("Error allocating memory \n");
+        return 1;
+    } else {
+        for (int i = 0; i < number; i++) {
+            printf("Enter price #%d: ", i + 1);
+            scanf("%f", &prices[i]);
+        }
+        
+        for (int i = 0; i < number; i++) {
+            printf("$%.2f ", prices[i]);
+        }
+    }
+    
+    // If we want to resize the array
+    int newNumber = 0;
+    printf("\nEnter the new number of prices: ");
+    scanf("%d", &newNumber);
+    
+    prices = realloc(prices, newNumber * sizeof(float));
+    
+    if (prices == NULL) {
+        printf("Error allocating memory \n");
+        return 1;
+    } else {
+        for (int i = number; i < newNumber; i++) {
+            printf("Enter price #%d: ", i + 1);
+            scanf("%f", &prices[i]);
+        }
+        
+        for (int i = 0; i < newNumber; i++) {
+            printf("$%.2f ", prices[i]);
+        }
+    }
+    
+    free(prices); // deallocate the memory
+    prices = NULL; // set the pointer to NULL
     return 0; // Exit the program if there is no error
 }
 
