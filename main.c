@@ -1422,6 +1422,7 @@ int main(){
    
     // ! 45.
     // ? realloc() = reallocate memory = resize the pointer array
+    /*
     int number = 0;
     printf("Enter the number of prices: ");
     scanf("%d", &number);
@@ -1465,6 +1466,26 @@ int main(){
     
     free(prices); // deallocate the memory
     prices = NULL; // set the pointer to NULL
+    */
+   
+    // ! 46.
+    // ? DIGITAL CLOCK
+    
+    time_t rawtime = 0; // 1 January 1970 (epoch)
+    struct tm *timeinfo = NULL;
+    bool isRunning = true;
+    
+    printf("DIGITAL CLOCK\n");
+    while (isRunning) {
+        time(&rawtime);
+        timeinfo = localtime(&rawtime);
+        
+        printf("\r%02d:%02d:%02d", timeinfo->tm_hour, timeinfo->tm_min, timeinfo->tm_sec);
+        
+        fflush(stdout);
+        sleep(1);
+    }
+    
     return 0; // Exit the program if there is no error
 }
 
